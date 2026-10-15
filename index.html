@@ -41,6 +41,12 @@
 
   <!-- HERO -->
   <header class="hero" id="hero">
+    <div class="hero__bg">
+      <video class="hero__video" autoplay muted loop playsinline poster="images/hero-bg.png" id="heroVideo">
+        <source src="images/hero-bg.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+    </div>
     <div class="hero__inner">
       <div class="hero__content">
         <p class="hero__tag">Authorized Geodnet Dealer</p>
@@ -48,11 +54,11 @@
         <p class="hero__subtitle">3D modeling, drone mapping, GPS machine control, and centimeter-level RTK corrections&nbsp;&mdash; all from one source you can&nbsp;trust.</p>
         <div class="hero__ctas">
           <a href="#services" class="btn btn--primary btn--lg">Explore Services</a>
-          <a href="#rtk" class="btn btn--outline btn--lg">RTK Subscriptions</a>
+          <a href="#rtk" class="btn btn--hero-outline btn--lg">RTK Subscriptions</a>
         </div>
       </div>
       <div class="hero__aside">
-        <img src="logos/svg/arrow-mapping-seal-navy.svg" alt="" class="hero__seal" aria-hidden="true">
+        <img src="logos/svg/arrow-mapping-seal-white.svg" alt="" class="hero__seal" aria-hidden="true">
       </div>
     </div>
     <div class="hero__stats">
@@ -81,24 +87,22 @@
       </header>
 
       <div class="services__grid">
-        <article class="card card--feature">
-          <div class="card__icon">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 3L3 12v16l17 9 17-9V12L20 3z"/><path d="M3 12l17 9 17-9"/><path d="M20 39V21"/></svg>
+        <article class="card card--feature card--has-img">
+          <img src="images/3d-terrain.png" alt="3D terrain model" class="card__img" loading="lazy">
+          <div class="card__body">
+            <h3 class="card__title">3D Modeling</h3>
+            <p>High-fidelity terrain and structural models from precision GPS data and drone photogrammetry. Ready for excavation planning, volume calculations, and client presentations.</p>
+            <ul class="card__list">
+              <li>Terrain surface models</li>
+              <li>Cut &amp; fill volumes</li>
+              <li>As-built documentation</li>
+            </ul>
+            <a href="#contact" class="card__link">Request a Model &rarr;</a>
           </div>
-          <h3 class="card__title">3D Modeling</h3>
-          <p>High-fidelity terrain and structural models from precision GPS data and drone photogrammetry. Ready for excavation planning, volume calculations, and client presentations.</p>
-          <ul class="card__list">
-            <li>Terrain surface models</li>
-            <li>Cut &amp; fill volumes</li>
-            <li>As-built documentation</li>
-          </ul>
-          <a href="#contact" class="card__link">Request a Model &rarr;</a>
         </article>
 
-        <article class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="20" cy="14" r="7"/><path d="M8 36c0-7.7 5.4-14 12-14s12 6.3 12 14"/><path d="M20 7V2M25 9l3-3M15 9l-3-3"/><rect x="15" y="22" width="10" height="7" rx="1.5"/></svg>
-          </div>
+        <article class="card card--has-thumb">
+          <img src="images/drone-mapping.png" alt="Drone mapping a construction site" class="card__thumb" loading="lazy">
           <h3 class="card__title">Drone Mapping</h3>
           <p>Aerial surveys without the surveyor licensing headaches. Orthomosaics, elevation maps, and volumetric analysis&nbsp;&mdash; fast and accurate.</p>
           <ul class="card__list">
@@ -109,10 +113,8 @@
           <a href="#contact" class="card__link">Schedule a Flight &rarr;</a>
         </article>
 
-        <article class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 3l3 7h7l-5 5 2 7-7-4-7 4 2-7-5-5h7z"/><circle cx="20" cy="31" r="7"/><path d="M17 31h6M20 28v6"/></svg>
-          </div>
+        <article class="card card--has-thumb">
+          <img src="images/gps-excavator.png" alt="Excavator with GPS machine control" class="card__thumb" loading="lazy">
           <h3 class="card__title">GPS Machine Control</h3>
           <p>Sell, setup, and support GPS systems for excavators and dozers. Get your grade right the first time&nbsp;&mdash; no re-staking, no rework.</p>
           <ul class="card__list">
@@ -137,10 +139,8 @@
           <a href="#pricing" class="card__link">See Pricing &rarr;</a>
         </article>
 
-        <article class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 34h32"/><path d="M10 34V20l10-12 10 12v14"/><rect x="16" y="24" width="8" height="10"/><path d="M2 20l18-16 18 16"/></svg>
-          </div>
+        <article class="card card--has-thumb">
+          <img src="images/house-staking.png" alt="GPS surveyor staking a house lot" class="card__thumb" loading="lazy">
           <h3 class="card__title">House Layout &amp; Staking</h3>
           <p>Fast, precise residential layout with GPS-grade accuracy. Simple houses, fun projects&nbsp;&mdash; done right and done fast.</p>
           <ul class="card__list">
@@ -166,27 +166,7 @@
       <div class="models__grid">
         <div class="models__card models__card--wide">
           <div class="models__vis">
-            <svg viewBox="0 0 600 260" preserveAspectRatio="none" class="models__topo">
-              <defs>
-                <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="var(--brand-gold)" stop-opacity=".18"/>
-                  <stop offset="100%" stop-color="var(--brand-ivory)" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <path d="M0,220 Q50,170 100,190 T200,150 T300,120 T400,140 T500,90 T600,110 V260 H0Z" fill="url(#tg)" stroke="var(--brand-gold)" stroke-width="1.2"/>
-              <path d="M0,240 Q80,210 160,220 T320,180 T480,170 T600,190 V260 H0Z" fill="url(#tg)" stroke="var(--brand-gold)" stroke-width=".6" opacity=".5"/>
-              <line x1="0" y1="130" x2="600" y2="130" stroke="var(--brand-slate)" stroke-width=".15" opacity=".25"/>
-              <line x1="0" y1="180" x2="600" y2="180" stroke="var(--brand-slate)" stroke-width=".15" opacity=".25"/>
-              <line x1="150" y1="60" x2="150" y2="260" stroke="var(--brand-slate)" stroke-width=".15" opacity=".25"/>
-              <line x1="300" y1="60" x2="300" y2="260" stroke="var(--brand-slate)" stroke-width=".15" opacity=".25"/>
-              <line x1="450" y1="60" x2="450" y2="260" stroke="var(--brand-slate)" stroke-width=".15" opacity=".25"/>
-              <circle cx="150" cy="180" r="3" fill="var(--brand-gold)"/>
-              <circle cx="300" cy="120" r="3" fill="var(--brand-gold)"/>
-              <circle cx="450" cy="135" r="3" fill="var(--brand-gold)"/>
-              <text x="150" y="172" fill="var(--brand-slate)" font-size="9" text-anchor="middle" font-family="Arial,sans-serif">4,521&prime;</text>
-              <text x="300" y="112" fill="var(--brand-slate)" font-size="9" text-anchor="middle" font-family="Arial,sans-serif">4,687&prime;</text>
-              <text x="450" y="127" fill="var(--brand-slate)" font-size="9" text-anchor="middle" font-family="Arial,sans-serif">4,612&prime;</text>
-            </svg>
+            <img src="images/3d-terrain.png" alt="3D digital elevation model" class="models__img" loading="lazy">
           </div>
           <div class="models__info">
             <p class="models__tag">Terrain Analysis</p>
@@ -196,12 +176,8 @@
         </div>
 
         <div class="models__card">
-          <div class="models__vis models__vis--hex">
-            <div class="hex-grid">
-              <div class="hex"></div><div class="hex"></div><div class="hex hex--on"></div>
-              <div class="hex"></div><div class="hex hex--gold"></div><div class="hex"></div>
-              <div class="hex hex--on"></div><div class="hex"></div><div class="hex"></div>
-            </div>
+          <div class="models__vis">
+            <img src="images/gps-excavator.png" alt="GPS excavator on graded site" class="models__img" loading="lazy">
           </div>
           <div class="models__info">
             <p class="models__tag">Volume Reports</p>
@@ -211,15 +187,8 @@
         </div>
 
         <div class="models__card">
-          <div class="models__vis models__vis--drone">
-            <svg viewBox="0 0 200 200" class="drone-svg">
-              <defs><linearGradient id="dg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="var(--brand-gold)"/><stop offset="100%" stop-color="var(--brand-slate)"/></linearGradient></defs>
-              <path d="M30,170 L30,30 L170,30 L170,170Z" fill="none" stroke="url(#dg)" stroke-width="1" stroke-dasharray="4 4" opacity=".35"/>
-              <path d="M55,145 L55,55 L145,55 L145,145Z" fill="none" stroke="url(#dg)" stroke-width="1" stroke-dasharray="4 4" opacity=".55"/>
-              <path d="M80,120 L80,80 L120,80 L120,120Z" fill="none" stroke="url(#dg)" stroke-width="1" stroke-dasharray="4 4" opacity=".75"/>
-              <circle cx="100" cy="100" r="4" fill="var(--brand-gold)"><animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite"/></circle>
-              <circle cx="100" cy="100" r="14" fill="none" stroke="var(--brand-gold)" stroke-width=".6" opacity=".4"><animate attributeName="r" values="14;22;14" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".4;0;.4" dur="2.5s" repeatCount="indefinite"/></circle>
-            </svg>
+          <div class="models__vis">
+            <img src="images/drone-mapping.png" alt="Drone mapping a construction site" class="models__img" loading="lazy">
           </div>
           <div class="models__info">
             <p class="models__tag">Aerial Survey</p>
@@ -340,27 +309,21 @@
       <div class="equip__grid">
         <article class="ecard">
           <div class="ecard__badge">Popular</div>
-          <div class="ecard__icon">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="7" y="17" width="26" height="16" rx="2.5"/><path d="M13 17V12a7 7 0 0114 0v5"/><circle cx="20" cy="27" r="3.5"/></svg>
-          </div>
+          <img src="images/gps-equipment.png" alt="GPS rover kit" class="ecard__img" loading="lazy">
           <h3>GPS Rover Kits</h3>
           <p>Complete rover packages with receiver, pole, controller, and field training. Ready to stake the same day.</p>
           <a href="#contact" class="btn btn--outline">Request Pricing</a>
         </article>
 
         <article class="ecard">
-          <div class="ecard__icon">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 34h24"/><path d="M12 34V20l8-12 8 12v14"/><rect x="17" y="24" width="6" height="10"/><path d="M4 20l16-14 16 14"/></svg>
-          </div>
+          <img src="images/base-station.png" alt="Geodnet base station on rooftop" class="ecard__img" loading="lazy">
           <h3>Geodnet Base Stations</h3>
           <p>RTK reference station kits. Mine GEOD tokens while providing corrections. We handle installation.</p>
           <a href="#contact" class="btn btn--outline">Get a Kit</a>
         </article>
 
         <article class="ecard">
-          <div class="ecard__icon">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="5" y="5" width="30" height="20" rx="2.5"/><path d="M5 12h30"/><circle cx="14" cy="18" r="2.5"/><path d="M20 16h10M20 20h7"/><path d="M12 25h16v7H12z"/><path d="M17 32v3M23 32v3"/></svg>
-          </div>
+          <img src="images/gps-excavator.png" alt="Machine control system in excavator" class="ecard__img" loading="lazy">
           <h3>Machine Control Systems</h3>
           <p>Full GPS kits for excavators: display, receiver, sensors, and wiring. Includes onsite setup and operator walkthrough.</p>
           <a href="#contact" class="btn btn--outline">Call for Pricing</a>
