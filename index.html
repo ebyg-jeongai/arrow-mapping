@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Mapping | Precision GPS, 3D Models & Drone Mapping</title>
+  <meta name="description" content="Arrow Mapping delivers centimeter-level GPS solutions, 3D modeling, drone mapping, and RTK correction subscriptions for excavators, builders, and land professionals.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ NAV ═══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="logo.png" alt="Arrow Mapping" class="nav__logo-img">
+        <span class="nav__wordmark">Arrow<span class="nav__wordmark--light">Mapping</span></span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#models">3D Models</a></li>
+        <li><a href="#rtk">RTK Network</a></li>
+        <li><a href="#equipment">Equipment</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="#pricing" class="btn btn--outline btn--sm">Subscribe</a>
+        <a href="#contact" class="btn btn--primary btn--sm">Get a Quote</a>
+      </div>
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ HERO ═══════════════════════════════════════════ -->
+  <header class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grid-overlay"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Authorized Geodnet Dealer
+      </div>
+      <h1 class="hero__title">
+        Precision That Hits<br>
+        <span class="hero__title--accent">The Mark</span>
+      </h1>
+      <p class="hero__subtitle">
+        3D modeling, drone mapping, GPS machine control, and centimeter-level RTK corrections — all from one source you can trust.
+      </p>
+      <div class="hero__ctas">
+        <a href="#services" class="btn btn--primary btn--lg">
+          Explore Services
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#rtk" class="btn btn--glass btn--lg">
+          RTK Subscriptions
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-value">1-2cm</span>
+          <span class="hero__stat-label">RTK Accuracy</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value">20K+</span>
+          <span class="hero__stat-label">Base Stations</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value">24/7</span>
+          <span class="hero__stat-label">RTK Corrections</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════ SERVICES ═══════════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">End-to-End <span class="text-accent">Precision</span> Solutions</h2>
+        <p class="section-desc">From aerial mapping to machine-grade GPS — we deliver the data your project demands.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card service-card--featured">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M24 4L4 14v20l20 10 20-10V14L24 4z"/>
+              <path d="M4 14l20 10 20-10"/>
+              <path d="M24 44V24"/>
+              <path d="M14 9l20 10"/>
+              <path d="M34 9L14 19"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">3D Modeling</h3>
+          <p class="service-card__desc">High-fidelity 3D terrain and structural models built from precision GPS data and drone photogrammetry. Ready for excavation planning, volume calculations, and client presentations.</p>
+          <ul class="service-card__features">
+            <li>Terrain surface models</li>
+            <li>Cut & fill volumes</li>
+            <li>As-built documentation</li>
+          </ul>
+          <a href="#contact" class="service-card__link">
+            Request a Model
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="24" cy="18" r="8"/>
+              <path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
+              <path d="M24 10V4M30 12l4-4M18 12l-4-4"/>
+              <rect x="18" y="26" width="12" height="8" rx="2"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Drone Mapping</h3>
+          <p class="service-card__desc">Aerial surveys without the surveyor licensing headaches. Orthomosaics, elevation maps, and volumetric analysis — fast and accurate.</p>
+          <ul class="service-card__features">
+            <li>Orthomosaic maps</li>
+            <li>Digital elevation models</li>
+            <li>Progress monitoring</li>
+          </ul>
+          <a href="#contact" class="service-card__link">
+            Schedule a Flight
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M24 4l4 8h8l-6 6 2 8-8-4-8 4 2-8-6-6h8z"/>
+              <circle cx="24" cy="36" r="8"/>
+              <path d="M20 36h8M24 32v8"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">GPS Machine Control</h3>
+          <p class="service-card__desc">Sell, setup, and support GPS systems for excavators and dozers. Get your grade right the first time — no re-staking, no rework.</p>
+          <ul class="service-card__features">
+            <li>Equipment sales & setup</li>
+            <li>Operator training</li>
+            <li>Ongoing support</li>
+          </ul>
+          <a href="#equipment" class="service-card__link">
+            View Equipment
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="24" cy="24" r="18"/>
+              <circle cx="24" cy="24" r="6"/>
+              <path d="M24 6v4M24 38v4M6 24h4M38 24h4"/>
+              <path d="M12 12l3 3M33 33l3 3M12 36l3-3M33 15l3-3"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">RTK Subscriptions</h3>
+          <p class="service-card__desc">Centimeter-accurate corrections streamed over cellular. No base station needed in the field. Powered by the Geodnet global network with 20,000+ stations.</p>
+          <ul class="service-card__features">
+            <li>$400/year (save vs. $600)</li>
+            <li>Auto-renewal & notifications</li>
+            <li>Global coverage</li>
+          </ul>
+          <a href="#pricing" class="service-card__link">
+            See Pricing
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="6" y="14" width="36" height="24" rx="3"/>
+              <path d="M6 22h36"/>
+              <path d="M14 30h8M14 34h12"/>
+              <path d="M16 8l8 6 8-6"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">House Layout & Staking</h3>
+          <p class="service-card__desc">Fast, precise residential layout with GPS-grade accuracy. Simple houses, fun projects — done right and done fast.</p>
+          <ul class="service-card__features">
+            <li>Foundation staking</li>
+            <li>Lot corners & setbacks</li>
+            <li>Elevation certificates</li>
+          </ul>
+          <a href="#contact" class="service-card__link">
+            Book a Layout
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ 3D MODELS SHOWCASE ═══════════════════════════════════════════ -->
+  <section class="models" id="models">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Showcase</span>
+        <h2 class="section-title">See Your Site in <span class="text-accent">Three Dimensions</span></h2>
+        <p class="section-desc">Interactive terrain models, cut/fill analysis, and photorealistic renders — delivered digitally so you can explore from anywhere.</p>
+      </div>
+      <div class="models__showcase">
+        <div class="models__card models__card--large">
+          <div class="models__card-visual">
+            <div class="models__topo">
+              <svg viewBox="0 0 600 300" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="topoGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4fc3f7" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#0a0e2a" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,250 Q50,200 100,220 T200,180 T300,150 T400,170 T500,120 T600,140 V300 H0Z" fill="url(#topoGrad)" stroke="#4fc3f7" stroke-width="1"/>
+                <path d="M0,270 Q80,240 160,250 T320,210 T480,200 T600,220 V300 H0Z" fill="url(#topoGrad)" stroke="#64b5f6" stroke-width="0.5" opacity="0.5"/>
+                <path d="M0,280 Q100,260 200,270 T400,240 T600,260 V300 H0Z" fill="url(#topoGrad)" stroke="#90caf9" stroke-width="0.5" opacity="0.3"/>
+                <!-- Grid lines -->
+                <line x1="0" y1="150" x2="600" y2="150" stroke="#4fc3f7" stroke-width="0.2" opacity="0.3"/>
+                <line x1="0" y1="200" x2="600" y2="200" stroke="#4fc3f7" stroke-width="0.2" opacity="0.3"/>
+                <line x1="0" y1="250" x2="600" y2="250" stroke="#4fc3f7" stroke-width="0.2" opacity="0.3"/>
+                <line x1="100" y1="100" x2="100" y2="300" stroke="#4fc3f7" stroke-width="0.2" opacity="0.3"/>
+                <line x1="200" y1="100" x2="200" y2="300" stroke="#4fc3f7" stroke-width="0.2" opacity="0.3"/>
+                <line x1="300" y1="100" x2="300" y2="300" stroke="#4fc3f7" stroke-width="0.2" opacity="0.3"/>
+                <line x1="400" y1="100" x2="400" y2="300" stroke="#4fc3f7" stroke-width="0.2" opacity="0.3"/>
+                <line x1="500" y1="100" x2="500" y2="300" stroke="#4fc3f7" stroke-width="0.2" opacity="0.3"/>
+                <!-- Data points -->
+                <circle cx="150" cy="210" r="3" fill="#4fc3f7"/>
+                <circle cx="300" cy="150" r="3" fill="#4fc3f7"/>
+                <circle cx="450" cy="165" r="3" fill="#4fc3f7"/>
+                <text x="150" y="200" fill="#4fc3f7" font-size="10" text-anchor="middle" font-family="Inter">4,521 ft</text>
+                <text x="300" y="140" fill="#4fc3f7" font-size="10" text-anchor="middle" font-family="Inter">4,687 ft</text>
+                <text x="450" y="155" fill="#4fc3f7" font-size="10" text-anchor="middle" font-family="Inter">4,612 ft</text>
+              </svg>
+            </div>
+          </div>
+          <div class="models__card-info">
+            <span class="models__card-tag">Terrain Analysis</span>
+            <h3>Digital Elevation Models</h3>
+            <p>GPS-grade terrain surfaces with sub-centimeter vertical accuracy. Export to CAD, share with your excavation crew, or embed in client proposals.</p>
+          </div>
+        </div>
+        <div class="models__card">
+          <div class="models__card-visual models__card-visual--hex">
+            <div class="hex-grid">
+              <div class="hex" style="--delay: 0"></div>
+              <div class="hex" style="--delay: 1"></div>
+              <div class="hex hex--active" style="--delay: 2"></div>
+              <div class="hex" style="--delay: 3"></div>
+              <div class="hex hex--reward" style="--delay: 4"></div>
+              <div class="hex" style="--delay: 5"></div>
+              <div class="hex hex--active" style="--delay: 6"></div>
+              <div class="hex" style="--delay: 7"></div>
+              <div class="hex" style="--delay: 8"></div>
+            </div>
+          </div>
+          <div class="models__card-info">
+            <span class="models__card-tag">Volume Reports</span>
+            <h3>Cut & Fill Calculations</h3>
+            <p>Know exactly how much dirt to move before the first bucket hits the ground.</p>
+          </div>
+        </div>
+        <div class="models__card">
+          <div class="models__card-visual models__card-visual--drone">
+            <div class="drone-path">
+              <svg viewBox="0 0 200 200">
+                <defs>
+                  <linearGradient id="droneGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#4fc3f7"/>
+                    <stop offset="100%" stop-color="#7c4dff"/>
+                  </linearGradient>
+                </defs>
+                <path d="M30,170 L30,30 L170,30 L170,170 Z" fill="none" stroke="url(#droneGrad)" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+                <path d="M50,150 L50,50 L150,50 L150,150 Z" fill="none" stroke="url(#droneGrad)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+                <path d="M70,130 L70,70 L130,70 L130,130 Z" fill="none" stroke="url(#droneGrad)" stroke-width="1" stroke-dasharray="4 4" opacity="0.8"/>
+                <circle cx="100" cy="100" r="4" fill="#4fc3f7">
+                  <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="100" cy="100" r="12" fill="none" stroke="#4fc3f7" stroke-width="0.5" opacity="0.5">
+                  <animate attributeName="r" values="12;20;12" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
+                </circle>
+              </svg>
+            </div>
+          </div>
+          <div class="models__card-info">
+            <span class="models__card-tag">Aerial Survey</span>
+            <h3>Orthomosaic Maps</h3>
+            <p>Stitched high-res aerial imagery, georeferenced and ready for measurement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ RTK NETWORK ═══════════════════════════════════════════ -->
+  <section class="rtk" id="rtk">
+    <div class="container">
+      <div class="rtk__layout">
+        <div class="rtk__info">
+          <span class="section-tag">Powered by Geodnet</span>
+          <h2 class="section-title">The RTK Network <span class="text-accent">Already Around You</span></h2>
+          <p class="rtk__desc">20,000+ reference stations worldwide stream centimeter-level corrections over cellular. No field base station, no setup time — just connect and dig.</p>
+          <div class="rtk__features">
+            <div class="rtk__feature">
+              <div class="rtk__feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <h4>Instant RTK Fix</h4>
+                <p>Get centimeter accuracy in seconds, not minutes. Multi-constellation GNSS with sub-second convergence.</p>
+              </div>
+            </div>
+            <div class="rtk__feature">
+              <div class="rtk__feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Nationwide Coverage</h4>
+                <p>Dense station network across the US. Orange hex zones earn 6x rewards for hosting a base station.</p>
+              </div>
+            </div>
+            <div class="rtk__feature">
+              <div class="rtk__feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div>
+                <h4>Works With Your Gear</h4>
+                <p>Standard NTRIP protocol. Compatible with Trimble, Topcon, Leica, DJI, and any NTRIP-capable receiver.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#pricing" class="btn btn--primary btn--lg">
+            Get Your RTK Subscription
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="rtk__visual">
+          <div class="rtk__map">
+            <div class="rtk__map-grid">
+              <!-- Animated hex map visualization -->
+              <svg viewBox="0 0 400 400" class="rtk__hex-map">
+                <defs>
+                  <radialGradient id="hexGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#4fc3f7" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#4fc3f7" stop-opacity="0"/>
+                  </radialGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                  </filter>
+                </defs>
+                <!-- Hex grid pattern -->
+                <g class="hex-grid-map" opacity="0.4">
+                  <polygon points="200,20 230,37 230,73 200,90 170,73 170,37" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="260,55 290,72 290,108 260,125 230,108 230,72" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="140,55 170,72 170,108 140,125 110,108 110,72" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="200,90 230,107 230,143 200,160 170,143 170,107" fill="#4fc3f7" fill-opacity="0.15" stroke="#4fc3f7" stroke-width="1"/>
+                  <polygon points="320,90 350,107 350,143 320,160 290,143 290,107" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="80,90 110,107 110,143 80,160 50,143 50,107" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="260,125 290,142 290,178 260,195 230,178 230,142" fill="#ff9800" fill-opacity="0.15" stroke="#ff9800" stroke-width="1"/>
+                  <polygon points="140,125 170,142 170,178 140,195 110,178 110,142" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="200,160 230,177 230,213 200,230 170,213 170,177" fill="#4fc3f7" fill-opacity="0.1" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="320,160 350,177 350,213 320,230 290,213 290,177" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="80,160 110,177 110,213 80,230 50,213 50,177" fill="#ff9800" fill-opacity="0.1" stroke="#ff9800" stroke-width="0.5"/>
+                  <polygon points="260,195 290,212 290,248 260,265 230,248 230,212" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="140,195 170,212 170,248 140,265 110,248 110,212" fill="#4fc3f7" fill-opacity="0.1" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="200,230 230,247 230,283 200,300 170,283 170,247" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                  <polygon points="320,230 350,247 350,283 320,300 290,283 290,247" fill="#ff9800" fill-opacity="0.15" stroke="#ff9800" stroke-width="1"/>
+                  <polygon points="80,230 110,247 110,283 80,300 50,283 50,247" fill="none" stroke="#4fc3f7" stroke-width="0.5"/>
+                </g>
+                <!-- Active stations -->
+                <circle cx="200" cy="125" r="4" fill="#4fc3f7" filter="url(#glow)">
+                  <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="260" cy="160" r="3" fill="#ff9800" filter="url(#glow)">
+                  <animate attributeName="r" values="3;5;3" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+                </circle>
+                <circle cx="320" cy="265" r="3" fill="#ff9800" filter="url(#glow)">
+                  <animate attributeName="r" values="3;5;3" dur="2.8s" repeatCount="indefinite" begin="1s"/>
+                </circle>
+                <circle cx="140" cy="230" r="3" fill="#4fc3f7" filter="url(#glow)">
+                  <animate attributeName="r" values="3;5;3" dur="2.2s" repeatCount="indefinite" begin="0.3s"/>
+                </circle>
+                <!-- Connection lines -->
+                <line x1="200" y1="125" x2="260" y2="160" stroke="#4fc3f7" stroke-width="0.5" opacity="0.3" stroke-dasharray="3 3">
+                  <animate attributeName="stroke-dashoffset" values="0;-6" dur="1s" repeatCount="indefinite"/>
+                </line>
+                <line x1="200" y1="125" x2="140" y2="230" stroke="#4fc3f7" stroke-width="0.5" opacity="0.3" stroke-dasharray="3 3">
+                  <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.2s" repeatCount="indefinite"/>
+                </line>
+                <!-- Labels -->
+                <text x="200" y="115" fill="#4fc3f7" font-size="8" text-anchor="middle" font-family="Inter" font-weight="600">YOUR STATION</text>
+                <text x="260" y="150" fill="#ff9800" font-size="7" text-anchor="middle" font-family="Inter">6x REWARD</text>
+              </svg>
+            </div>
+            <div class="rtk__map-label">
+              <span class="rtk__map-live"></span>
+              Live Network Map
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ BASE STATION ═══════════════════════════════════════════ -->
+  <section class="basestation">
+    <div class="container">
+      <div class="basestation__banner">
+        <div class="basestation__content">
+          <h3>Host a Base Station. <span class="text-accent">Earn While You Sleep.</span></h3>
+          <p>Bolt it to your roof, connect to Wi-Fi, and earn ~$1,000/year in GEOD tokens. Only 2 watts of power. Arrow Mapping will set you up with everything you need.</p>
+          <div class="basestation__specs">
+            <div class="basestation__spec">
+              <span class="basestation__spec-value">~2W</span>
+              <span class="basestation__spec-label">Power Draw</span>
+            </div>
+            <div class="basestation__spec">
+              <span class="basestation__spec-value">2.4GHz</span>
+              <span class="basestation__spec-label">Wi-Fi Required</span>
+            </div>
+            <div class="basestation__spec">
+              <span class="basestation__spec-value">~$1K</span>
+              <span class="basestation__spec-label">Annual Earnings</span>
+            </div>
+            <div class="basestation__spec">
+              <span class="basestation__spec-value">6x</span>
+              <span class="basestation__spec-label">Reward in Open Hexes</span>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn--primary btn--lg">Get a Base Station Kit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ EQUIPMENT ═══════════════════════════════════════════ -->
+  <section class="equipment" id="equipment">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hardware</span>
+        <h2 class="section-title">GPS Equipment <span class="text-accent">& Sales</span></h2>
+        <p class="section-desc">Machine control systems for excavators and dozers. We sell, install, train, and support.</p>
+      </div>
+      <div class="equipment__grid">
+        <div class="equipment__card">
+          <div class="equipment__card-top">
+            <div class="equipment__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="8" y="20" width="32" height="20" rx="3"/>
+                <path d="M16 20V14a8 8 0 0116 0v6"/>
+                <circle cx="24" cy="32" r="4"/>
+                <path d="M24 28v4"/>
+              </svg>
+            </div>
+            <span class="equipment__badge">Popular</span>
+          </div>
+          <h3>GPS Rover Kits</h3>
+          <p>Complete rover packages with receiver, pole, controller, and field training. Ready to stake the same day.</p>
+          <a href="#contact" class="btn btn--outline btn--sm">Request Pricing</a>
+        </div>
+
+        <div class="equipment__card">
+          <div class="equipment__card-top">
+            <div class="equipment__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M10 38h28"/>
+                <path d="M14 38V24l10-14 10 14v14"/>
+                <rect x="20" y="28" width="8" height="10"/>
+                <path d="M4 24l20-18 20 18"/>
+              </svg>
+            </div>
+          </div>
+          <h3>Geodnet Base Stations</h3>
+          <p>RTK reference station kits. Mine GEOD tokens while providing corrections to the network. We handle install.</p>
+          <a href="#contact" class="btn btn--outline btn--sm">Get a Kit</a>
+        </div>
+
+        <div class="equipment__card">
+          <div class="equipment__card-top">
+            <div class="equipment__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="6" width="36" height="24" rx="3"/>
+                <path d="M6 14h36"/>
+                <circle cx="16" cy="20" r="3"/>
+                <path d="M24 18h12M24 22h8"/>
+                <path d="M14 30h20v8H14z"/>
+                <path d="M20 38v4M28 38v4"/>
+              </svg>
+            </div>
+          </div>
+          <h3>Machine Control Systems</h3>
+          <p>Full GPS kits for excavators: display, receiver, sensors, and wiring. Includes onsite setup and operator walkthrough.</p>
+          <a href="#contact" class="btn btn--outline btn--sm">Call for Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ PRICING ═══════════════════════════════════════════ -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">RTK Subscriptions</span>
+        <h2 class="section-title">Simple, <span class="text-accent">Transparent</span> Pricing</h2>
+        <p class="section-desc">One subscription per device. No base station to buy, no hidden fees. Cancel anytime.</p>
+      </div>
+      <div class="pricing__grid">
+        <div class="pricing__card">
+          <div class="pricing__card-header">
+            <h3>Monthly</h3>
+            <span class="pricing__badge">Flexible</span>
+          </div>
+          <div class="pricing__price">
+            <span class="pricing__amount">$35</span>
+            <span class="pricing__period">/month</span>
+          </div>
+          <p class="pricing__note">Cancel anytime. Great for seasonal projects.</p>
+          <ul class="pricing__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              1-2 cm accuracy
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Full network access
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              No contract
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Subscribe</a>
+        </div>
+
+        <div class="pricing__card pricing__card--featured">
+          <div class="pricing__card-header">
+            <h3>Annual</h3>
+            <span class="pricing__badge pricing__badge--accent">Best Value</span>
+          </div>
+          <div class="pricing__price">
+            <span class="pricing__amount">$400</span>
+            <span class="pricing__period">/year</span>
+          </div>
+          <p class="pricing__note">Save $20 vs. monthly. Auto-renews with 30-day notice.</p>
+          <ul class="pricing__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Everything in Monthly
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              30-day renewal reminder
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Priority support
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Saves $200 vs. $600 competitors
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">Subscribe & Save</a>
+        </div>
+
+        <div class="pricing__card">
+          <div class="pricing__card-header">
+            <h3>Enterprise</h3>
+            <span class="pricing__badge">Fleet</span>
+          </div>
+          <div class="pricing__price">
+            <span class="pricing__amount">Custom</span>
+            <span class="pricing__period"></span>
+          </div>
+          <p class="pricing__note">Volume pricing for multi-device fleets.</p>
+          <ul class="pricing__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Multi-device discounts
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Invoice / PO billing
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              ACH payments available
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ HOW IT WORKS ═══════════════════════════════════════════ -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Getting Started</span>
+        <h2 class="section-title">Up and Running in <span class="text-accent">Three Steps</span></h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">01</div>
+          <h3 class="step__title">Choose Your Plan</h3>
+          <p class="step__desc">Pick monthly or annual. Sign up and pay online — credit card or ACH.</p>
+        </div>
+        <div class="step__connector">
+          <svg width="60" height="2"><line x1="0" y1="1" x2="60" y2="1" stroke="#4fc3f7" stroke-width="1" stroke-dasharray="4 4"/></svg>
+        </div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <h3 class="step__title">Get Your Credentials</h3>
+          <p class="step__desc">NTRIP login delivered instantly. Enter host, port, mountpoint into your receiver.</p>
+        </div>
+        <div class="step__connector">
+          <svg width="60" height="2"><line x1="0" y1="1" x2="60" y2="1" stroke="#4fc3f7" stroke-width="1" stroke-dasharray="4 4"/></svg>
+        </div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <h3 class="step__title">Start Digging</h3>
+          <p class="step__desc">Centimeter accuracy in seconds. No base station to set up. Just connect and go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ CONTACT ═══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__layout">
+        <div class="contact__info">
+          <span class="section-tag">Let's Talk</span>
+          <h2 class="section-title">Ready to Hit <span class="text-accent">Your Mark?</span></h2>
+          <p>Whether you need a 3D model, RTK subscription, GPS equipment, or a house layout — reach out and we'll get you sorted.</p>
+          <div class="contact__methods">
+            <div class="contact__method">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>Call or Text</span>
+            </div>
+            <div class="contact__method">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              <span>Email Us</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact__form-wrapper">
+          <form class="contact__form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(801) 555-0000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="interest">I'm interested in...</label>
+              <select id="interest" name="interest">
+                <option value="">Select a service</option>
+                <option value="rtk">RTK Subscription</option>
+                <option value="3d">3D Model / Drone Mapping</option>
+                <option value="gps">GPS Equipment</option>
+                <option value="layout">House Layout / Staking</option>
+                <option value="basestation">Base Station Kit</option>
+                <option value="other">Something Else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--full">
+              Send Message
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ FOOTER ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="logo.png" alt="Arrow Mapping" class="footer__logo">
+          <p>Precision GPS solutions, 3D modeling, and drone mapping for builders, excavators, and land professionals.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>Services</h4>
+            <a href="#services">3D Modeling</a>
+            <a href="#services">Drone Mapping</a>
+            <a href="#services">House Layout</a>
+            <a href="#equipment">GPS Equipment</a>
+          </div>
+          <div class="footer__col">
+            <h4>RTK</h4>
+            <a href="#rtk">How It Works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Free Trial</a>
+            <a href="https://geodnet.com" target="_blank" rel="noopener">Geodnet Network</a>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <a href="#contact">Contact</a>
+            <a href="#services">About</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Arrow Mapping. All rights reserved.</p>
+        <p class="footer__powered">Authorized Geodnet Dealer</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
