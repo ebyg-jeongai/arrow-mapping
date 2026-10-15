@@ -1,0 +1,10 @@
+:root {
+  --brand-navy: #080F3D;
+  --brand-ivory: #F7F5EF;
+  --brand-gold: #B69B67;
+  --brand-slate: #293352;
+  --brand-white: #FFFFFF;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Arial, Helvetica, sans-serif;
+}
+/* Use navy text on gold buttons. Gold is an accent, not body text on white. */

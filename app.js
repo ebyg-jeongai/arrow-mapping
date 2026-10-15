@@ -1,148 +1,91 @@
-/* ═══════════════════════════════════════════════════════════════════
-   Arrow Mapping — Interaction Layer
-   ═══════════════════════════════════════════════════════════════════ */
-
 (function () {
   'use strict';
 
-  // ─── Nav scroll effect ──────────────────────────────────────────
-  const nav = document.getElementById('nav');
-  let lastScroll = 0;
+  // Nav scroll
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 50);
+  }, { passive: true });
 
-  function handleScroll() {
-    const y = window.scrollY;
-    nav.classList.toggle('nav--scrolled', y > 60);
-    lastScroll = y;
-  }
-
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
-
-  // ─── Mobile menu ────────────────────────────────────────────────
-  const burger = document.getElementById('navBurger');
-  const navLinks = document.getElementById('navLinks');
-
-  burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    const spans = burger.querySelectorAll('span');
-    if (navLinks.classList.contains('active')) {
-      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      spans[1].style.opacity = '0';
-      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+  // Mobile menu
+  var burger = document.getElementById('navBurger');
+  var links = document.getElementById('navLinks');
+  burger.addEventListener('click', function () {
+    links.classList.toggle('active');
+    var s = burger.querySelectorAll('span');
+    if (links.classList.contains('active')) {
+      s[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+      s[1].style.opacity = '0';
+      s[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
     } else {
-      spans[0].style.transform = '';
-      spans[1].style.opacity = '';
-      spans[2].style.transform = '';
+      s[0].style.transform = '';
+      s[1].style.opacity = '';
+      s[2].style.transform = '';
     }
   });
-
-  // Close mobile menu on link click
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      const spans = burger.querySelectorAll('span');
-      spans[0].style.transform = '';
-      spans[1].style.opacity = '';
-      spans[2].style.transform = '';
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      links.classList.remove('active');
+      burger.querySelectorAll('span').forEach(function (s) { s.style.transform = ''; s.style.opacity = ''; });
     });
   });
 
-  // ─── Scroll reveal ──────────────────────────────────────────────
-  const reveals = document.querySelectorAll(
-    '.service-card, .models__card, .equipment__card, .pricing__card, .step, .rtk__feature'
-  );
+  // Scroll reveal
+  var els = document.querySelectorAll('.card,.models__card,.ecard,.pcard,.step,.rtk__feat');
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        var parent = e.target.parentElement;
+        var cls = e.target.className.split(' ')[0];
+        var siblings = parent.querySelectorAll(':scope > .' + cls);
+        var idx = Array.from(siblings).indexOf(e.target);
+        setTimeout(function () { e.target.classList.add('visible'); }, idx * 80);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function (el) { obs.observe(el); });
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          // Stagger siblings
-          const parent = entry.target.parentElement;
-          const siblings = parent.querySelectorAll(':scope > ' + entry.target.tagName.toLowerCase() + ', :scope > .' + entry.target.className.split(' ')[0]);
-          const index = Array.from(siblings).indexOf(entry.target);
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, index * 100);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-  );
-
-  reveals.forEach(el => observer.observe(el));
-
-  // ─── Smooth anchor scrolling with offset ────────────────────────
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (!target) return;
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var h = this.getAttribute('href');
+      if (h === '#') return;
+      var t = document.querySelector(h);
+      if (!t) return;
       e.preventDefault();
-      const offset = nav.offsetHeight + 20;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
+      window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 16, behavior: 'smooth' });
     });
   });
 
-  // ─── Contact form (demo handler) ───────────────────────────────
-  const form = document.getElementById('contactForm');
+  // Contact form
+  var form = document.getElementById('contactForm');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-
-    const btn = form.querySelector('button[type="submit"]');
-    const originalHTML = btn.innerHTML;
-
-    btn.innerHTML = `
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M20 6L9 17l-5-5"/>
-      </svg>
-      Message Sent!
-    `;
-    btn.style.background = 'linear-gradient(135deg, #4caf50, #2e7d32)';
+    var btn = form.querySelector('button[type="submit"]');
+    var orig = btn.textContent;
+    btn.textContent = 'Message Sent!';
+    btn.style.background = '#4caf50';
+    btn.style.color = '#fff';
     btn.disabled = true;
-
-    setTimeout(() => {
-      btn.innerHTML = originalHTML;
+    setTimeout(function () {
+      btn.textContent = orig;
       btn.style.background = '';
+      btn.style.color = '';
       btn.disabled = false;
       form.reset();
     }, 3000);
   });
 
-  // ─── Active nav link highlight ──────────────────────────────────
-  const sections = document.querySelectorAll('section[id]');
-
-  function highlightNav() {
-    const scrollY = window.scrollY + nav.offsetHeight + 100;
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-      const link = navLinks.querySelector(`a[href="#${id}"]`);
+  // Active nav highlight
+  var sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY + nav.offsetHeight + 80;
+    sections.forEach(function (sec) {
+      var link = links.querySelector('a[href="#' + sec.id + '"]');
       if (link) {
-        if (scrollY >= top && scrollY < top + height) {
-          link.style.color = 'var(--text-bright)';
-        } else {
-          link.style.color = '';
-        }
+        link.style.color = (y >= sec.offsetTop && y < sec.offsetTop + sec.offsetHeight) ? 'var(--brand-navy)' : '';
       }
     });
-  }
-
-  window.addEventListener('scroll', highlightNav, { passive: true });
-
-  // ─── Parallax on hero glows ─────────────────────────────────────
-  const glow1 = document.querySelector('.hero__glow--1');
-  const glow2 = document.querySelector('.hero__glow--2');
-
-  window.addEventListener('mousemove', (e) => {
-    if (window.innerWidth < 768) return;
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 20;
-    if (glow1) glow1.style.transform = `translate(${x}px, ${y}px)`;
-    if (glow2) glow2.style.transform = `translate(${-x}px, ${-y}px)`;
   }, { passive: true });
-
 })();
